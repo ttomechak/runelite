@@ -122,6 +122,7 @@ public interface XpTrackerConfig extends Config
 		return XpPanelLabel.XP_HOUR;
 	}
 
+
 	@ConfigItem(
 		position = 7,
 		keyName = "xpPanelLabel1",

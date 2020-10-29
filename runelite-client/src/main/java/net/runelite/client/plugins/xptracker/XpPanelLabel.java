@@ -37,10 +37,12 @@ public enum XpPanelLabel
 
 	XP_GAINED("XP Gained", snap -> format(snap.getXpGainedInSession())),
 	XP_HOUR("XP/hr", snap -> format(snap.getXpPerHour())),
+	XP_MIN("XP/min", snap -> format(snap.getXpPerMin())),
 	XP_LEFT("XP Left", snap -> format(snap.getXpRemainingToGoal())),
 
 	ACTIONS_LEFT("Actions", snap -> format(snap.getActionsRemainingToGoal())),
 	ACTIONS_HOUR("Actions/hr", snap -> format(snap.getActionsPerHour())),
+	ACTIONS_MIN("Actions/min", snap -> format(snap.getActionsPerMin())),
 	ACTIONS_DONE("Actions Done", snap -> format(snap.getActionsInSession())),
 	;
 

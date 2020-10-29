@@ -57,6 +57,7 @@ class XpPanel extends PluginPanel
 
 	private final JLabel overallExpGained = new JLabel(XpInfoBox.htmlLabel("Gained: ", 0));
 	private final JLabel overallExpHour = new JLabel(XpInfoBox.htmlLabel("Per hour: ", 0));
+	private final JLabel overallExpMin = new JLabel(XpInfoBox.htmlLabel("Per min: ", 0));
 
 	private final JPanel overallPanel = new JPanel();
 
@@ -117,9 +118,11 @@ class XpPanel extends PluginPanel
 
 		overallExpGained.setFont(FontManager.getRunescapeSmallFont());
 		overallExpHour.setFont(FontManager.getRunescapeSmallFont());
+		overallExpMin.setFont(FontManager.getRunescapeSmallFont());
 
 		overallInfo.add(overallExpGained);
 		overallInfo.add(overallExpHour);
+		overallInfo.add(overallExpMin);
 
 		overallPanel.add(overallIcon, BorderLayout.WEST);
 		overallPanel.add(overallInfo, BorderLayout.CENTER);
@@ -209,6 +212,7 @@ class XpPanel extends PluginPanel
 	{
 		overallExpGained.setText(XpInfoBox.htmlLabel("Gained: ", xpSnapshotTotal.getXpGainedInSession()));
 		overallExpHour.setText(XpInfoBox.htmlLabel("Per hour: ", xpSnapshotTotal.getXpPerHour()));
+		overallExpMin.setText(XpInfoBox.htmlLabel("Per Min: ", xpSnapshotTotal.getXpPerMin()));
 	}
 
 }

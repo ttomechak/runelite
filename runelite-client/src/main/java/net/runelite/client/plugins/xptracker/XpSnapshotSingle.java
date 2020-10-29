@@ -39,10 +39,13 @@ class XpSnapshotSingle
 	private int xpGainedInSession;
 	private int xpRemainingToGoal;
 	private int xpPerHour;
+	private int xpPerMin;
 	private double skillProgressToGoal;
 	private int actionsInSession;
 	private int actionsRemainingToGoal;
 	private int actionsPerHour;
+	private int actionsPerMin;
 	private String timeTillGoal;
 	private String timeTillGoalShort;
+
 }
