@@ -37,6 +37,7 @@ public interface XpTrackerService
 	 * Get the number of actions per hour
 	 */
 	int getActionsHr(Skill skill);
+	int getActionsMin(Skill skill);
 
 	/**
 	 * Get the number of actions remaining
@@ -52,6 +53,7 @@ public interface XpTrackerService
 	 * Get the amount of xp per hour
 	 */
 	int getXpHr(Skill skill);
+	int getXpMin(Skill skill);
 
 	/**
 	 * Get the start goal XP

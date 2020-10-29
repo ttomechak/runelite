@@ -75,10 +75,19 @@ class XpStateSingle
 	{
 		return toHourly(getXpAction(actionType).getActions());
 	}
+	private int getActionsMin()
+	{
+		return toMin(getXpAction(actionType).getActions());
+	}
+
 
 	private int toHourly(int value)
 	{
 		return (int) ((1.0 / (getTimeElapsedInSeconds() / 3600.0)) * value);
+	}
+	private int toMin(int value)
+	{
+		return (int) ((1.0 / (getTimeElapsedInSeconds() / 60.0)) * value);
 	}
 
 	private long getTimeElapsedInSeconds()
@@ -201,8 +210,12 @@ class XpStateSingle
 
 
 	int getXpHr()
+{
+	return toHourly(xpGained);
+}
+	int getXpMin()
 	{
-		return toHourly(xpGained);
+		return toMin(xpGained);
 	}
 
 	boolean update(long currentXp, int goalStartXp, int goalEndXp)
@@ -293,11 +306,13 @@ class XpStateSingle
 			.xpGainedInSession(xpGained)
 			.xpRemainingToGoal(getXpRemaining())
 			.xpPerHour(getXpHr())
+			.xpPerMin(getXpMin())
 			.skillProgressToGoal(getSkillProgress())
 			.actionType(actionType)
 			.actionsInSession(getXpAction(actionType).getActions())
 			.actionsRemainingToGoal(getActionsRemaining())
 			.actionsPerHour(getActionsHr())
+			.actionsPerMin(getActionsMin())
 			.timeTillGoal(getTimeTillLevel())
 			.timeTillGoalShort(getTimeTillLevelShort())
 			.startGoalXp(startLevelExp)
